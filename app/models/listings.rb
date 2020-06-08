@@ -1,5 +1,6 @@
 class Listing
-
+   
+    @@all = []
     attr_reader :street_name, :city
 
     def initialize(street_name, city)
@@ -13,9 +14,9 @@ class Listing
     end
 
 
-    def trips 
+    def trips        
         Trip.all.select do |trip|
-        trip.listing == self 
+            trip.listing == self 
         end
     end 
 
@@ -28,9 +29,17 @@ class Listing
     end
 
     def self.find_all_by_city(city)
+        self.all.select{|listing| listing.city == city}
+    end
+    def self.most_popular
+        self.all.max_by{|listing| listing.trip_count}    
     end
 
-    def self.most_popular
+    def self.most_popular_array
+        num = self.most_popular.trip_count
+        self.all.select{|listing| listing.trip_count == num}
     end
+    
+   
 
 end

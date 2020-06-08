@@ -1,14 +1,14 @@
 class Trip
 
-    attr_reader :name, :guest, :listing
+    attr_reader :guest, :listing, :date
     #attr_accessor :guest, :listing
 
     @@all = []
 
-    def initialize(name, guest, listing)
-        @name = name
+    def initialize(guest, listing, date)       
         @guest = guest
         @listing = listing
+        @date = date
         @@all << self
     end
 
