@@ -20,7 +20,7 @@ class Dessert
     end
 
     def calories
-        self.ingredients.map {|ing| ing.calorie_count}
+        self.ingredients.map {|ing| ing.calorie_count}.reduce(:+)
     end
 
 end

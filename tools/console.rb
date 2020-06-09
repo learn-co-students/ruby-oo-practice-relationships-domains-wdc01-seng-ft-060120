@@ -18,17 +18,18 @@ end
 # dc_michael = Trip.new(dc_listing, michael)
 
 
-# bakery_one = Bakery.new("Bakery1")
-# bakery_two = Bakery.new("Bakery2")
+#Bakery
+bakery_one = Bakery.new("Bakery1")
+bakery_two = Bakery.new("Bakery2")
 
-# dessert_one = Dessert.new("Cake", bakery_one)
-# dessert_two = Dessert.new("Pie", bakery_two)
-# dessert_three = Dessert.new("Oreo", bakery_one)
+dessert_one = Dessert.new("Cake", bakery_one)
+dessert_two = Dessert.new("Pie", bakery_two)
+dessert_three = Dessert.new("Oreo", bakery_one)
 
-# ingredient_cake_one = Ingredient.new("Batter", dessert_one, 100)
-# ingredient_cake_two = Ingredient.new("Cream", dessert_one, 250)
-# ingredient_pie_one = Ingredient.new("Crust", dessert_two, 105)
-# ingredient_oreo_one = Ingredient.new("cookie", dessert_three, 25)
+ingredient_cake_one = Ingredient.new("Batter", dessert_one, 100)
+ingredient_cake_two = Ingredient.new("Cream", dessert_one, 250)
+ingredient_pie_one = Ingredient.new("Crust", dessert_two, 105)
+ingredient_oreo_one = Ingredient.new("cookie", dessert_three, 25)
 
 
 # driver_one = Driver.new("Michael")
@@ -150,37 +151,37 @@ end
 
 
 
-# gym
-# locations
-waldorf = Location.new("Waldorf")
-accokeek = Location.new("Accokeek")
-dc = Location.new("DC")
+# # gym
+# # locations
+# waldorf = Location.new("Waldorf")
+# accokeek = Location.new("Accokeek")
+# dc = Location.new("DC")
 
-#trainers
-michael = Trainer.new("Michael")
-jack = Trainer.new("Jack")
-henry = Trainer.new("Henry")
+# #trainers
+# michael = Trainer.new("Michael")
+# jack = Trainer.new("Jack")
+# henry = Trainer.new("Henry")
 
-#location_trainers
-waldorf_x_michael = LocationTrainer.new(waldorf, michael)
-accokeek_x_michael = LocationTrainer.new(accokeek, michael)
-dc_x_jack = LocationTrainer.new(dc, jack)
-dc_x_henry = LocationTrainer.new(dc, henry)
+# #location_trainers
+# waldorf_x_michael = LocationTrainer.new(waldorf, michael)
+# accokeek_x_michael = LocationTrainer.new(accokeek, michael)
+# dc_x_jack = LocationTrainer.new(dc, jack)
+# dc_x_henry = LocationTrainer.new(dc, henry)
 
-#clients
-mary = Client.new("Mary")
-mary.assign_trainer(michael)
-doug = Client.new("Doug", jack)
-harry = Client.new("Harry", jack)
-zach = Client.new("Zach")
+# #clients
+# mary = Client.new("Mary")
+# mary.assign_trainer(michael)
+# doug = Client.new("Doug", jack)
+# harry = Client.new("Harry", jack)
+# zach = Client.new("Zach")
 
-#client_location
-mary_x_accokeek = ClientLocation.new(mary, accokeek)
-mary_x_dc = ClientLocation.new(mary, dc)
-doug_x_dc = ClientLocation.new(doug, dc)
-harry_x_dc = ClientLocation.new(harry, dc)
-zach_x_waldorf = ClientLocation.new(zach, waldorf)
-zach_x_accokeek = ClientLocation.new(zach, accokeek)
+# #client_location
+# mary_x_accokeek = ClientLocation.new(mary, accokeek)
+# mary_x_dc = ClientLocation.new(mary, dc)
+# doug_x_dc = ClientLocation.new(doug, dc)
+# harry_x_dc = ClientLocation.new(harry, dc)
+# zach_x_waldorf = ClientLocation.new(zach, waldorf)
+# zach_x_accokeek = ClientLocation.new(zach, accokeek)
 
 
 Pry.start

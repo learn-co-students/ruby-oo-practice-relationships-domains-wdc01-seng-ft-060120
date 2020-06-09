@@ -28,7 +28,7 @@ class Bakery
     end
 
     def shopping_list
-        return self.ingredients.map {|ing| ing.name}
+        self.ingredients.flatten
     end
 
 end
