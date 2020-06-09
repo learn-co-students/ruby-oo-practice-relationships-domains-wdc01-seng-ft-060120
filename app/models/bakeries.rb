@@ -1,12 +1,11 @@
 class Bakery
+
     attr_accessor :name
-    attr_reader :desserts
 
     @@all = []
 
     def initialize(name)
         @name = name
-        @desserts = []
 
         @@all << self
     end
@@ -15,16 +14,21 @@ class Bakery
         return @@all
     end
 
-    def add_dessert(dessert)
-        @desserts << dessert
+    def ingredients
+        self.desserts.map {|dessert| dessert.ingredients}
     end
 
-    def ingredients
+    def desserts
+        Dessert.all.select {|dessert| dessert.bakery == self}
     end
 
     def average_calories
+        calorie_array = self.ingredients.map {|ing| ing.calorie_count}
+        return calorie_array.reduce(:+) / calorie_array.size
     end
 
     def shopping_list
+        return self.ingredients.map {|ing| ing.name}
     end
+
 end
