@@ -22,6 +22,10 @@ class Driver
         Ride.all.select {|ride| ride.driver == self}
     end
 
+    def total_distance
+        return self.rides.map {|ride| ride.distance}.reduce(:+)
+    end
+
     def self.milage_cap(miles)
         mile_cap_drivers = []
 
