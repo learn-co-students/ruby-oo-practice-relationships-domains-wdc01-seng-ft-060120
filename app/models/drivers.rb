@@ -1,6 +1,8 @@
 class Driver
     attr_accessor :name
 
+    @@all = []
+
     def initialize(name)
         @name = name
         @@all << self
@@ -11,14 +13,18 @@ class Driver
     end
 
 
-    def trips 
-        Trip.all.select do |trip|
-        trip.listing == self 
+    def rides 
+        Ride.all.select do |ride|
+        ride.driver == self 
         end
     end 
       
-    def guests
-        trips.map { |trip| trip.guest}
+    def passengers
+        rides.map { |ride| ride.passenger}
+    end
+
+    def self.mileage_cap(distance)
+        p driver_arr = self.rides.select { |ride| ride.distance > distance}
     end
 
 end
