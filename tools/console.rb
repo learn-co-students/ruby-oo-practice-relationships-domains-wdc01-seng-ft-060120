@@ -130,23 +130,57 @@ end
 
 
 
+# #crowdfunding
+# #users
+# michael = User.new("Michael")
+# jack = User.new("Jack")
+# john = User.new("John")
 
-#crowdfunding
-#users
-michael = User.new("Michael")
-jack = User.new("Jack")
-john = User.new("John")
+# #projects
+# proj1 = Project.new("First Project", john, 100)
+# proj2 = Project.new("Second Project", john, 50)
+# proj3 = Project.new("Third Project", michael, 22)
+# proj4 = Project.new("Fourth Project", jack, 2000)
 
-#projects
-proj1 = Project.new("First Project", john, 100)
-proj2 = Project.new("Second Project", john, 50)
-proj3 = Project.new("Third Project", michael, 22)
-proj4 = Project.new("Fourth Project", jack, 2000)
+# #pledges
+# michael_x_50_x_proj1 = Pledge.new(proj1, michael, 10)
+# jack_x_25_x_proj1 = Pledge.new(proj1, jack, 25)
+# jack_x_15_x_proj2 = Pledge.new(proj2, jack, 75)
+# john_x_22_x_proj3 = Pledge.new(proj3, john, 22)
 
-#pledges
-michael_x_50_x_proj1 = Pledge.new(proj1, michael, 10)
-jack_x_25_x_proj1 = Pledge.new(proj1, jack, 25)
-jack_x_15_x_proj2 = Pledge.new(proj2, jack, 75)
-john_x_22_x_proj3 = Pledge.new(proj3, john, 22)
+
+
+# gym
+# locations
+waldorf = Location.new("Waldorf")
+accokeek = Location.new("Accokeek")
+dc = Location.new("DC")
+
+#trainers
+michael = Trainer.new("Michael")
+jack = Trainer.new("Jack")
+henry = Trainer.new("Henry")
+
+#location_trainers
+waldorf_x_michael = LocationTrainer.new(waldorf, michael)
+accokeek_x_michael = LocationTrainer.new(accokeek, michael)
+dc_x_jack = LocationTrainer.new(dc, jack)
+dc_x_henry = LocationTrainer.new(dc, henry)
+
+#clients
+mary = Client.new("Mary")
+mary.assign_trainer(michael)
+doug = Client.new("Doug", jack)
+harry = Client.new("Harry", jack)
+zach = Client.new("Zach")
+
+#client_location
+mary_x_accokeek = ClientLocation.new(mary, accokeek)
+mary_x_dc = ClientLocation.new(mary, dc)
+doug_x_dc = ClientLocation.new(doug, dc)
+harry_x_dc = ClientLocation.new(harry, dc)
+zach_x_waldorf = ClientLocation.new(zach, waldorf)
+zach_x_accokeek = ClientLocation.new(zach, accokeek)
+
 
 Pry.start
