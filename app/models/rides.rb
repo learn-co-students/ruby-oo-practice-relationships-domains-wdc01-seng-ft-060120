@@ -17,6 +17,12 @@ class Ride
     end
 
     def self.average_distance
+        count_array = []
+        self.all.each do |ride|
+            count_array << ride.distance
+        end
+
+        return count_array.reduce(:+) / count_array.count.to_f
     end
 
 end
