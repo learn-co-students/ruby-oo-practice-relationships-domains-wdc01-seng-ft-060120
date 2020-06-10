@@ -28,7 +28,7 @@ class Bakery
     end
 
     def shopping_list
-        self.ingredients.flatten.map {|ingredient| ingredient.name}.join(", ")
+        self.ingredients.flatten.map {|ingredient| ingredient.name}.uniq.join(", ")
     end
 
 end
