@@ -19,17 +19,17 @@ end
 
 
 # #Bakery
-# bakery_one = Bakery.new("Bakery1")
-# bakery_two = Bakery.new("Bakery2")
+bakery_one = Bakery.new("Bakery1")
+bakery_two = Bakery.new("Bakery2")
 
-# dessert_one = Dessert.new("Cake", bakery_one)
-# dessert_two = Dessert.new("Pie", bakery_two)
-# dessert_three = Dessert.new("Oreo", bakery_one)
+dessert_one = Dessert.new("Cake", bakery_one)
+dessert_two = Dessert.new("Pie", bakery_two)
+dessert_three = Dessert.new("Oreo", bakery_one)
 
-# ingredient_cake_one = Ingredient.new("Batter", dessert_one, 100)
-# ingredient_cake_two = Ingredient.new("Cream", dessert_one, 250)
-# ingredient_pie_one = Ingredient.new("Crust", dessert_two, 105)
-# ingredient_oreo_one = Ingredient.new("cookie", dessert_three, 25)
+ingredient_cake_one = Ingredient.new("Batter", dessert_one, 100)
+ingredient_cake_two = Ingredient.new("Cream", dessert_one, 250)
+ingredient_pie_one = Ingredient.new("Crust", dessert_two, 105)
+ingredient_oreo_one = Ingredient.new("cookie", dessert_three, 25)
 
 
 driver_one = Driver.new("Michael")
